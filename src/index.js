@@ -1,0 +1,1 @@
+impport "./index.scss";
