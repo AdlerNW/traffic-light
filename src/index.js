@@ -50,16 +50,36 @@ function go(){
 }
 
 function time(){
-    if (secondsLeft == 0 && activeR){
-        secondsLeft = 3;
+    if (secondsLeft == 0){
+        animation();
     }
 
-    if (secondsLeft == 0 && activeY){
-        secondsLeft = 15;
+    if (secondsLeft == 3){
+        if (activeR) lightRed.style.animation = 'animStop 1s linear 3';
+        if (activeG) lightGreen.style.animation = 'animGo 1s linear 3';
     }
 
-    if (secondsLeft == 0 && activeG){
-        secondsLeft = 10;
-    }
+
     timer.textContent = secondsLeft--;
+}
+
+function animation(){
+    if (activeR) {
+        secondsLeft = 3;
+        lightYellow.style.animation = 'animReady 1s linear 3';
+        lightRed.style.animation = 'none';
+        lightGreen.style.animation = 'none';
+    }
+    if (activeY) {
+        secondsLeft = 15;
+        lightRed.style.animation = 'none';
+        lightYellow.style.animation = 'none';
+        lightGreen.style.animation = 'none';
+    }
+    if (activeG) {
+        secondsLeft = 10;
+        lightRed.style.animation = 'none';
+        lightYellow.style.animation = 'none';
+        lightGreen.style.animation = 'none';
+    }
 }

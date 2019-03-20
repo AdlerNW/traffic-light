@@ -51,3 +51,33 @@ body{
     margin-left: 70%;
     font-size: 40px;
 }
+
+@keyframes animStop{
+    50%{
+        background: none;
+    }
+
+    100%{
+        background: red;
+    }
+}
+
+@keyframes animReady{
+    50%{
+        background: none;
+    }
+
+    100%{
+        background: yellow;
+    }
+}
+
+@keyframes animGo{
+    50%{
+        background: none;
+    }
+
+    100%{
+        background: green;
+    }
+}
